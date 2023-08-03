@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -7,9 +8,9 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/"> Home </RouterLink>
         <RouterLink to="/event2"> Home2 </RouterLink>
+        <RouterLink to="/student"> Student </RouterLink>
         <RouterLink to="/about"> About </RouterLink>
       </nav>
-      
   </header>
 
   <RouterView />
@@ -19,7 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
@@ -29,7 +30,7 @@ nav {
 }
 
 nav a {
-  font-weight:bold;
+  font-weight: bold;
   color: #2c3e50;
 }
 
@@ -50,5 +51,4 @@ header {
 h4 {
   font-size: 20px;
 }
-
 </style>
