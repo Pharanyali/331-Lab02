@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import EventCard from '../components/EventCard.vue'
-import type { EventItem } from '@/type';
-import EventCard2 from '@/components/EventCard2.vue';
+import type { EventItem } from '@/type'
+import EventCard2 from '@/components/EventCard2.vue'
 import axios from 'axios'
 import { ref } from 'vue'
 import type { Ref } from 'vue'
-const events: Ref<Array<EventItem>> = ref ([])
-  axios.get<EventItem[]>('http://localhost:3004/events')
-  .then((response) => {
-    events.value = response.data
-  })
+const events: Ref<Array<EventItem>> = ref([])
+axios.get<EventItem[]>('http://localhost:3004/events').then((response) => {
+  events.value = response.data
+})
 </script>
 
 <template>
